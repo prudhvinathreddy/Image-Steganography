@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography Project</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #18161c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #18161c;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #5c5555;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 1rem;
+            color: #777;
+            padding: 20px;
+            border-top: 1px solid #eaeaea;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .steps {
+            margin-left: 20px;
+        }
+
+        .steps li {
+            font-size: 1.1rem;
+        }
+
+        .contact {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #007bff;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Image Steganography Project</h1>
+        <p>A secure way to hide messages inside images using encryption and LSB algorithm.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About the Project</h2>
+            <p>This project allows users to encode and decode messages within images using the Least Significant Bit (LSB) algorithm. Additionally, the messages are encrypted using AES encryption to add a layer of security. Users can hide a secret message within an image and retrieve it by providing the correct passphrase.</p>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <h3>Encode</h3>
+            <p>To encode a message, you will enter the text you wish to hide, select an image, and provide a passphrase for encryption. The message is encrypted using AES and then embedded in the image using the LSB technique.</p>
+            <h3>Decode</h3>
+            <p>To decode a message, you need to upload the encoded image and provide the correct passphrase. If the passphrase is correct, the hidden message will be decrypted and displayed.</p>
+        </section>
+
+        <section>
+            <h2>How to Run the Project</h2>
+            <p>Follow these steps to run the project:</p>
+            <ul class="steps">
+                <li><strong>Clone the repository:</strong> Clone the repository to your local machine by running:</li>
+                <pre>git clone https://github.com/yourusername/your-repository-name.git</pre>
+                <li><strong>Open the project:</strong> Open the `index.html` file in your web browser to start using the tool.</li>
+                <li><strong>Encode or Decode:</strong> Use the "Encode" or "Decode" tab to either encode a message in an image or extract a hidden message from an image.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <ul class="steps">
+                <li><strong>Message Encryption:</strong> The message is encrypted with a passphrase using AES encryption.</li>
+                <li><strong>Image Manipulation:</strong> The secret message is embedded into the image using the Least Significant Bit (LSB) method.</li>
+                <li><strong>File Handling:</strong> Users can upload and download images for encoding and decoding.</li>
+                <li><strong>Security:</strong> Only users with the correct passphrase can decrypt the hidden message.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Future Improvements</h2>
+            <p>In the future, we plan to:</p>
+            <ul class="steps">
+                <li>Allow users to upload images directly from URLs.</li>
+                <li>Improve the user interface with more visual enhancements.</li>
+                <li>Support additional encoding and encryption algorithms for greater flexibility.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>For any questions or suggestions, <a href="mailto:prudhvinathreddy222@gmail.com">contact me</a>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

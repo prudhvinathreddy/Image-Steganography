@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include CryptoJS for encryption -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Steganography</h1>
+        <h3>A secret way of sharing messages</h3>
+
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'encode')">Encode</button>
+            <button class="tablinks" onclick="openTab(event, 'decode')">Decode</button>
+        </div>
+
+        <div id="encode" class="tabcontent">
+            <h2>Encode</h2>
+            <textarea id="encodeText" placeholder="Enter text to encode"></textarea><br>
+            <input type="file" id="encodeImageInput" accept="image/*"><br>
+            <button onclick="encode()">Encode</button>
+            <button onclick="reset('encode')">Reset</button>
+        </div>
+
+        <div id="decode" class="tabcontent">
+            <h2>Decode</h2>
+            <input type="file" id="decodeInput" accept="image/*"><br>
+            <button onclick="decode()">Decode</button>
+            <button onclick="reset('decode')">Reset</button>
+            <div id="decodedText"></div>
+        </div>
+
+        <!-- Popup for Success message -->
+        <div id="popup-overlay" class="popup-overlay"></div>
+        <div id="popup" class="popup">
+            <span class="close-btn">&times;</span>
+            <p></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
