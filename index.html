@@ -34,28 +34,14 @@
             border-radius: 8px;
         }
 
-        h2 {
-            font-size: 2rem;
+        h2, h3 {
             color: #18161c;
-            margin-bottom: 10px;
         }
 
-        h3 {
-            font-size: 1.6rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        p {
+        p, ul {
             font-size: 1.1rem;
             line-height: 1.6;
             color: #5c5555;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
         }
 
         li {
@@ -64,11 +50,10 @@
 
         pre {
             background-color: #f1f1f1;
-            padding: 20px;
+            padding: 15px;
             border-radius: 5px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             overflow-x: auto;
-            margin-bottom: 20px;
         }
 
         .footer {
@@ -89,10 +74,6 @@
             text-decoration: underline;
         }
 
-        .steps {
-            margin-left: 20px;
-        }
-
         .steps li {
             font-size: 1.1rem;
         }
@@ -107,14 +88,40 @@
             padding: 20px;
         }
 
-        footer a {
-            color: #007bff;
-        }
-
         footer a:hover {
             text-decoration: underline;
         }
 
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                width: 90%;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -127,46 +134,45 @@
     <main>
         <section>
             <h2>About the Project</h2>
-            <p>This project allows users to encode and decode messages within images using the Least Significant Bit (LSB) algorithm. Additionally, the messages are encrypted using AES encryption to add a layer of security. Users can hide a secret message within an image and retrieve it by providing the correct passphrase.</p>
+            <p>This project allows users to encode and decode messages within images using the Least Significant Bit (LSB) algorithm. Messages are also encrypted with AES for added security.</p>
         </section>
 
         <section>
             <h2>How It Works</h2>
             <h3>Encode</h3>
-            <p>To encode a message, you will enter the text you wish to hide, select an image, and provide a passphrase for encryption. The message is encrypted using AES and then embedded in the image using the LSB technique.</p>
+            <p>Enter a secret message, select an image, and provide a passphrase. The message is encrypted and embedded in the image.</p>
             <h3>Decode</h3>
-            <p>To decode a message, you need to upload the encoded image and provide the correct passphrase. If the passphrase is correct, the hidden message will be decrypted and displayed.</p>
+            <p>Upload the encoded image and provide the passphrase to reveal the hidden message.</p>
         </section>
 
         <section>
             <h2>How to Run the Project</h2>
-            <p>Follow these steps to run the project:</p>
+            <p>Follow these steps:</p>
             <ul class="steps">
-                <li><strong>Clone the repository:</strong> Clone the repository to your local machine by running:</li>
+                <li><strong>Clone the repository:</strong></li>
                 <pre>git clone https://github.com/yourusername/your-repository-name.git</pre>
-                <li><strong>Open the project:</strong> Open the `ImageSteganography.html` file in your web browser to start using the tool.</li>
-                <li><strong>Encode or Decode:</strong> Use the "Encode" or "Decode" tab to either encode a message in an image or extract a hidden message from an image.</li>
+                <li><strong>Open the project:</strong> Open `ImageSteganography.html` in your web browser.</li>
+                <li><strong>Encode or Decode:</strong> Use the available options to hide or extract messages.</li>
             </ul>
-            <a href="ImageSteganography.html" target=_blank><button>TRY NOW</button></a>
+            <a href="ImageSteganography.html" target="_blank" class="btn">TRY NOW</a>
         </section>
 
         <section>
             <h2>Features</h2>
             <ul class="steps">
-                <li><strong>Message Encryption:</strong> The message is encrypted with a passphrase using AES encryption.</li>
-                <li><strong>Image Manipulation:</strong> The secret message is embedded into the image using the Least Significant Bit (LSB) method.</li>
-                <li><strong>File Handling:</strong> Users can upload and download images for encoding and decoding.</li>
-                <li><strong>Security:</strong> Only users with the correct passphrase can decrypt the hidden message.</li>
+                <li><strong>Message Encryption:</strong> Secure AES encryption for hidden messages.</li>
+                <li><strong>Image Manipulation:</strong> LSB-based steganography technique.</li>
+                <li><strong>File Handling:</strong> Upload and download images seamlessly.</li>
+                <li><strong>Security:</strong> Only accessible with the correct passphrase.</li>
             </ul>
         </section>
 
         <section>
             <h2>Future Improvements</h2>
-            <p>In the future, we plan to:</p>
             <ul class="steps">
-                <li>Allow users to upload images directly from URLs.</li>
-                <li>Improve the user interface with more visual enhancements.</li>
-                <li>Support additional encoding and encryption algorithms for greater flexibility.</li>
+                <li>Enable image uploads from URLs.</li>
+                <li>Enhance UI with improved visuals.</li>
+                <li>Add more encoding and encryption methods.</li>
             </ul>
         </section>
     </main>
