@@ -1,5 +1,4 @@
-body {
-    font-family: cursive;
+body {  
     background-color: #f4f4f9;
     color: #333;
     margin: 0;
@@ -44,7 +43,7 @@ h3 {
 }
 
 .tablinks:hover {
-    background-color: #ddd;
+    background-color: black;
 }
 
 .tablinks.active {
@@ -56,11 +55,10 @@ h3 {
     display: none;
     padding: 20px;
     border: 1px solid #ccc;
-    border-top: none;
 }
 
 textarea {
-    width: 100%;
+    width: 90%;
     height: 100px;
     padding: 10px;
     border: 1px solid #ccc;
